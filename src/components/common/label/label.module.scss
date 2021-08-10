@@ -1,0 +1,31 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--qs-4x);
+
+  img {
+    margin-right: var(--qs-4x);
+  }
+
+  div {
+    color: var(--color-tc-oarnge-w);
+    font-size: var(--qs-4x);
+    font-weight: 900;
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+    margin-bottom: var(--qs-3x);
+
+    img {
+      width: var(--qs-6x);
+    }
+
+    div {
+      font-size: var(--qs-3x);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  position: absolute;
+  top: calc(var(--qs) * 15);
+  right: calc(var(--qs) * 15);
+
+  > button {
+
+    background: unset;
+    border: unset;
+    cursor: pointer;
+
+    > img {
+      width: var(--qs-6x);
+    }
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+    top: var(--qs-12x);
+    right: var(--qs-5x);
+
+    > button {
+
+      > img {
+        width: var(--qs-4x);
+      }
+    }
+  }
+}

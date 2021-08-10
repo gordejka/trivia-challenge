@@ -1,0 +1,28 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: var(--qs-10x) 0;
+  flex-flow: wrap;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  > div {
+    width: 100%;
+  }
+
+  &.centered {
+    align-items: center;
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+    align-items: flex-end;
+
+    &.centered {
+      align-items: center;
+    }
+  }
+}

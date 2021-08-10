@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'colors.scss';
+
+body {
+  margin: 0;
+
+  &, input, select, button {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: var(--qs);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-tc-white);
+  border-radius: calc(var(--qs) / 2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-tc-white-w-d);
+  border-radius: calc(var(--qs) / 2);
+}
+
+:root {
+  --quant-size: 4px;
+
+  --qs: var(--quant-size);
+  --qs-2x: calc(var(--quant-size) * 2);
+  --qs-3x: calc(var(--quant-size) * 3);
+  --qs-4x: calc(var(--quant-size) * 4);
+  --qs-5x: calc(var(--quant-size) * 5);
+  --qs-6x: calc(var(--quant-size) * 6);
+  --qs-7x: calc(var(--quant-size) * 7);
+  --qs-8x: calc(var(--quant-size) * 8);
+  --qs-9x: calc(var(--quant-size) * 9);
+  --qs-10x: calc(var(--quant-size) * 10);
+  --qs-11x: calc(var(--quant-size) * 11);
+  --qs-12x: calc(var(--quant-size) * 12);
+
+  --border-size-s: 1px;
+  --border-size-m: 2px;
+
+  --box-shadow-focus-elements: 0 0 1px 1px var(--color-tc-white);
+}

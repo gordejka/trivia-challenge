@@ -1,0 +1,16 @@
+.wrapper {
+
+  .progressBar {
+    width: 100%;
+    height: var(--qs);
+    background-color: var(--color-tc-white-b);
+    position: relative;
+    border-radius: var(--qs);
+
+    .completed {
+      height: var(--qs);
+      background-color: var(--color-tc-white-w-d);
+      border-radius: var(--qs);
+    }
+  }
+}

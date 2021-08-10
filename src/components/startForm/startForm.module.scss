@@ -1,0 +1,28 @@
+@import 'src/assets/styles/breakpoints';
+
+.form {
+  margin: 0 auto;
+  width: calc(var(--qs) * 110);
+
+  .formGroup {
+    margin-bottom: var(--qs-9x);
+
+    &:last-of-type {
+      margin-bottom: calc(var(--qs) * 27);
+    }
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .form {
+    width: 100%;
+
+    .formGroup {
+      margin-bottom: var(--qs-7x);
+
+      &:last-of-type {
+        margin-bottom: calc(var(--qs) * 30);
+      }
+    }
+  }
+}
