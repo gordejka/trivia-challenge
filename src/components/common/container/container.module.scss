@@ -1,0 +1,16 @@
+@import 'src/assets/styles/breakpoints';
+
+.container {
+  width: calc(var(--qs) * 170);
+  margin: auto;
+  padding: 0 var(--qs-7x);
+  box-sizing: border-box;
+}
+
+@media (max-width: $sm-width-max) {
+  .container {
+    width: 100%;
+    max-width: calc(var(--qs) * 95);
+    padding: 0 var(--qs-5x);
+  }
+}

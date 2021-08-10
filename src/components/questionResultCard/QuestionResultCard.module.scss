@@ -1,0 +1,41 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  min-height: calc(var(--qs) * 20);
+  width: 100%;
+  background-color: var(--color-tc-white);
+  border-radius: var(--qs-3x);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(var(--qs) * 15) 0 var(--qs-7x);
+  box-sizing: border-box;
+  margin-bottom: var(--qs-6x);
+  line-height: 150%;
+  font-weight: 500;
+  font-size: var(--qs-4x);
+  color: var(--color-tc-violet-l);
+  position: relative;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &.incorrect {
+    background-color: var(--color-tc-white-red);
+  }
+
+  > img {
+    position: absolute;
+    right: var(--qs-7x);
+  }
+
+  > div {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+    padding: var(--qs-5x) calc(var(--qs) * 15) var(--qs-5x) var(--qs-7x);
+  }
+}

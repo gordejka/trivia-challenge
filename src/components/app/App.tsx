@@ -1,19 +1,22 @@
-import React, { FC } from 'react';
-import logo from '../../logo.svg';
-import classes from './app.module.css';
+import React, { FC, useMemo } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import PageRouter from '../pageRouter/PageRouter';
+import Loader from '../loader/Loader';
+import { RootState } from '../../interfaces/RootState';
+import ErrorModal from '../modal/ErrorModal';
 
 const App: FC = () => {
+  const { isFetched } = useSelector((state: RootState) => state.quiz);
+  const loader = useMemo(() => !isFetched && <Loader />, [isFetched]);
+
   return (
-    <div className={classes.app}>
-      <header className={classes.appHeader}>
-        <img src={logo} className={classes.appLogo} alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className={classes.AppLink} href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <PageRouter />
+      </BrowserRouter>
+      {loader}
+      <ErrorModal />
     </div>
   );
 };
