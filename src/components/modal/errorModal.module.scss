@@ -1,0 +1,29 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: var(--color-tc-black-opacity);
+
+  > .modal {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: calc(var(--qs) * 75);
+    margin: auto;
+    background-color: var(--color-tc-white);
+    padding: var(--qs-5x);
+    box-sizing: border-box;
+    border-radius: var(--qs-3x);
+
+    > .title {
+      font-size: var(--qs-5x);
+      text-align: center;
+      font-weight: 600;
+      padding-bottom: var(--qs-5x);
+    }
+  }
+}

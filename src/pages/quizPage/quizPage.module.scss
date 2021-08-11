@@ -1,0 +1,127 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  width: 100%;
+
+  .logo {
+    width: 100%;
+  }
+
+  .categoryWrapper {
+    min-height: calc(var(--qs) * 56);
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--qs-7x);
+
+    > div {
+      font-size: calc(var(--qs) * 15);
+      text-align: center;
+      font-weight: bold;
+      width: 100%;
+      color: var(--color-tc-violet-l);
+    }
+  }
+
+  .levelWrapper {
+    width: 100%;
+    font-weight: 500;
+    font-size: var(--qs-7x);
+    letter-spacing: 0.5em;
+    color: var(--color-tc-violet-l);
+    text-align: center;
+    margin-bottom: var(--qs-10x);
+  }
+
+  .questionWrapper {
+    min-height: calc(var(--qs) * 46);
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--qs-10x);
+
+    > div {
+      width: 100%;
+      text-align: center;
+      color: var(--color-tc-violet-l);
+      font-size: var(--qs-8x);
+      line-height: 150%;
+    }
+  }
+
+  .progressBarWrapper {
+    margin-bottom: calc(var(--qs) * 15);
+
+    > div {
+      margin: 0 auto;
+      width: calc(var(--qs) * 102);
+    }
+  }
+
+  .scoreWrapper {
+    margin-bottom: var(--qs-4x);
+
+    > div {
+      margin: 0 auto;
+      width: calc(var(--qs) * 102);
+    }
+  }
+
+  .buttonWrapper {
+    width: calc(var(--qs) * 110);
+    margin: 0 auto var(--qs-9x);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+
+    .categoryWrapper {
+      min-height: calc(var(--qs) * 30);
+      margin-bottom: var(--qs-4x);
+      align-items: flex-end;
+
+      > div {
+        font-size: var(--qs-8x);
+      }
+    }
+
+    .levelWrapper {
+      font-size: var(--qs-4x);
+      margin-bottom: var(--qs-6x);
+    }
+
+    .scoreWrapper {
+
+      > div {
+        width: 100%;
+      }
+    }
+
+    .progressBarWrapper {
+      margin-bottom: var(--qs-12x);
+
+      > div {
+        width: 100%;
+      }
+    }
+
+    .questionWrapper {
+      min-height: calc(var(--qs) * 46);
+      margin-bottom: var(--qs-12x);
+
+      > div {
+        text-align: left;
+        font-size: var(--qs-6x);
+        font-weight: 500;
+      }
+    }
+
+    .buttonWrapper {
+      width: 100%;
+      margin: 0 auto var(--qs-4x);
+    }
+  }
+}

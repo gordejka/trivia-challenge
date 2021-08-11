@@ -1,0 +1,32 @@
+@import 'src/assets/styles/breakpoints';
+
+.wrapper {
+  .firstValue {
+    font-weight: bold;
+    font-size: var(--qs-7x);
+    color: var(--color-tc-white-w-d);
+  }
+
+  .secondValue {
+    font-weight: bold;
+    font-size: var(--qs-5x);
+    color: var(--color-tc-violet-l);
+
+    &.light {
+      color: var(--color-tc-white);
+    }
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .wrapper {
+
+    .firstValue {
+      font-size: var(--qs-5x);
+    }
+
+    .secondValue {
+      font-size: var(--qs-3x);
+    }
+  }
+}

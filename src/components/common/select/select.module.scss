@@ -1,0 +1,36 @@
+@import 'src/assets/styles/breakpoints';
+
+.customSelect {
+  display: block;
+  width: 100%;
+  color: var(--color-tc-white);
+  border: var(--border-size-s) solid;
+  border-radius: var(--qs-3x);
+  font-size: var(--qs-5x);
+  padding: var(--qs-6x) var(--qs-5x);
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  background-image: url('../../../assets/images/iconArrowDown.svg');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 96%;
+  font-weight: 500;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--box-shadow-focus-elements);
+  }
+
+  option {
+    color: var(--color-tc-black);
+  }
+}
+
+@media (max-width: $sm-width-max) {
+  .customSelect {
+    font-size: var(--qs-4x);
+    padding: var(--qs-4x) var(--qs-5x);
+    background-size: 15px;
+  }
+}

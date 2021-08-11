@@ -1,0 +1,33 @@
+@import 'src/assets/styles/breakpoints';
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  height: calc(var(--qs) * 57);
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+}
+
+.title {
+  font-size: var(--qs-12x);
+  color: var(--color-tc-white);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: var(--qs-10x);
+}
+
+
+@media (max-width: $sm-width-max) {
+  .title {
+    font-size: var(--qs-6x);
+    margin-bottom: var(--qs-5x);
+  }
+
+  .logoWrapper {
+    height: calc(var(--qs) * 32);
+    margin-bottom: 0;
+  }
+}

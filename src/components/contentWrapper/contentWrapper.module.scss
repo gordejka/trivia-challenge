@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: var(--qs-10x) 0;
+  flex-flow: wrap;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  > div {
+    width: 100%;
+  }
+}
