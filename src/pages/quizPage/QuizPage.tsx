@@ -41,16 +41,16 @@ const QuizPage: FC = () => {
   }, [dispatch, historyPush]);
 
   return (
-    <PageWrapper wrapperType={WrapperType.LIGHT}>
+    <PageWrapper wrapperType={WrapperType.QUIZ_PAGE}>
       <Container>
-        <ContentWrapper alignItemsCenter>
+        <ContentWrapper>
           <div className={classes.wrapper}>
             <div className={classes.categoryWrapper}>
               <div>{currentQuestion && currentQuestion.category}</div>
             </div>
             <div className={classes.levelWrapper}>level 1</div>
             <div className={classes.scoreWrapper}>
-              <Score secondValue={questionsCount} firstValue={answeredQuestionsCount} wrapperType={WrapperType.DARK} />
+              <Score secondValue={questionsCount} firstValue={answeredQuestionsCount} wrapperType={WrapperType.START_PAGE} />
             </div>
             <div className={classes.progressBarWrapper}>
               <ProgressBar questionsCount={questionsCount} answeredQuestionsCount={answeredQuestionsCount} />

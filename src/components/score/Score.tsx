@@ -1,8 +1,8 @@
 import React, { FC, useMemo } from 'react';
-import cn from 'classnames';
 import classes from './score.module.scss';
 import toTwoDigitNumber from '../../util/toTwoDigitNumber';
 import WrapperType from '../../enums/WrapperType';
+import classNames from '../../util/classNames';
 
 interface Props {
   firstValue: number;
@@ -12,8 +12,8 @@ interface Props {
 
 const Score: FC<Props> = ({ firstValue, secondValue, wrapperType }) => {
   const secondValueClassName = useMemo(() => {
-    if (wrapperType === WrapperType.LIGHT) {
-      return cn(classes.secondValue, classes.light);
+    if (wrapperType === WrapperType.QUIZ_PAGE) {
+      return classNames([classes.secondValue, classes.light]);
     }
     return classes.secondValue;
   }, [wrapperType]);

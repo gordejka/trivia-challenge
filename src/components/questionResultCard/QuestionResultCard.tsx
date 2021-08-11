@@ -1,8 +1,8 @@
 import React, { FC, useMemo } from 'react';
-import cn from 'classnames';
 import classes from './QuestionResultCard.module.scss';
 import iconCheck from '../../assets/images/iconCheck.svg';
 import iconTimes from '../../assets/images/iconTimes.svg';
+import classNames from '../../util/classNames';
 
 interface Props {
   question: string;
@@ -13,7 +13,7 @@ interface Props {
 const QuestionResultCard: FC<Props> = ({ question, answer, correctAnswer }) => {
   const cardClassName = useMemo(() => {
     if (answer !== correctAnswer) {
-      return cn(classes.wrapper, classes.incorrect);
+      return classNames([classes.wrapper, classes.incorrect]);
     }
     return classes.wrapper;
   }, [answer, correctAnswer]);

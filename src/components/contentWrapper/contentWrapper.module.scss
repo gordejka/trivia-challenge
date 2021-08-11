@@ -1,5 +1,3 @@
-@import 'src/assets/styles/breakpoints';
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -10,19 +8,5 @@
 
   > div {
     width: 100%;
-  }
-
-  &.centered {
-    align-items: center;
-  }
-}
-
-@media (max-width: $sm-width-max) {
-  .wrapper {
-    align-items: flex-end;
-
-    &.centered {
-      align-items: center;
-    }
   }
 }

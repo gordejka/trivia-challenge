@@ -1,36 +1,75 @@
 @import 'src/assets/styles/breakpoints';
 
-.dark {
-  background: url('../../assets/images/backgrounds/firstScreen/item_1.svg') right calc(var(--qs) * 20) no-repeat,
-  url('../../assets/images/backgrounds/firstScreen/item_2.svg') left bottom no-repeat,
-  url('../../assets/images/backgrounds/firstScreen/item_3.svg') left top no-repeat,
-  url('../../assets/images/backgrounds/firstScreen/item_4.svg') right bottom no-repeat var(--color-tc-violet-l);
+.startPage {
+  background: url('../../assets/images/backgrounds/startPage/item_1.svg') right calc(var(--qs) * 20) no-repeat,
+  url('../../assets/images/backgrounds/startPage/item_2.svg') left bottom no-repeat,
+  url('../../assets/images/backgrounds/startPage/item_3.svg') left top no-repeat,
+  url('../../assets/images/backgrounds/startPage/item_4.svg') right bottom no-repeat var(--color-tc-violet-l);
   background-size: calc(var(--qs) * 25) calc(var(--qs) * 87),
   calc(var(--qs) * 50) calc(var(--qs) * 50),
   calc(var(--qs) * 37) calc(var(--qs) * 150),
   calc(var(--qs) * 20) calc(var(--qs) * 112);
 }
 
-.light {
-  background: url('../../assets/images/backgrounds/secondScreen/item_3.svg') right calc(var(--qs) * 20) no-repeat,
-  url('../../assets/images/backgrounds/secondScreen/item_4.svg') left bottom no-repeat,
-  url('../../assets/images/backgrounds/secondScreen/item_2.svg') left top no-repeat,
-  url('../../assets/images/backgrounds/secondScreen/item_1.svg') right bottom no-repeat var(--color-tc-white);
+.quizPage {
+  background: url('../../assets/images/backgrounds/quizPage/item_3.svg') right calc(var(--qs) * 20) no-repeat,
+  url('../../assets/images/backgrounds/quizPage/item_4.svg') left bottom no-repeat,
+  url('../../assets/images/backgrounds/quizPage/item_2.svg') left top no-repeat,
+  url('../../assets/images/backgrounds/quizPage/item_1.svg') right bottom no-repeat var(--color-tc-white);
   background-size: calc(var(--qs) * 32) calc(var(--qs) * 107),
   calc(var(--qs) * 85) calc(var(--qs) * 107),
   calc(var(--qs) * 55) calc(var(--qs) * 67),
   calc(var(--qs) * 50) calc(var(--qs) * 75);
 }
 
+.resultPage {
+  background: url('../../assets/images/backgrounds/resultPage/item_1.svg') right calc(var(--qs) * 20) no-repeat,
+  url('../../assets/images/backgrounds/resultPage/item_2.svg') left bottom no-repeat,
+  url('../../assets/images/backgrounds/resultPage/item_3.svg') left top no-repeat,
+  url('../../assets/images/backgrounds/resultPage/item_4.svg') right bottom no-repeat var(--color-tc-violet-l);
+  background-size: calc(var(--qs) * 25) calc(var(--qs) * 87),
+  calc(var(--qs) * 29) calc(var(--qs) * 50),
+  calc(var(--qs) * 30) calc(var(--qs) * 153),
+  calc(var(--qs) * 20) calc(var(--qs) * 112);
+}
+
 @media (max-width: $sm-width-max) {
-  .light {
-    background: url('../../assets/images/backgrounds/secondScreen/item_3.svg') right var(--qs-10x) no-repeat,
-    url('../../assets/images/backgrounds/secondScreen/item_4.svg') left bottom no-repeat,
-    url('../../assets/images/backgrounds/secondScreen/item_2.svg') left top no-repeat,
-    url('../../assets/images/backgrounds/secondScreen/item_1.svg') right bottom no-repeat var(--color-tc-white);
-    background-size: calc(var(--qs) * 15) calc(var(--qs) * 50),
-    calc(var(--qs) * 30) calc(var(--qs) * 40),
-    calc(var(--qs) * 30) calc(var(--qs) * 40),
-    calc(var(--qs) * 40) calc(var(--qs) * 45);
+  .startPage {
+    background: url('../../assets/images/backgrounds/startPage/mobile/itemMobile_2.svg') right top no-repeat,
+    url('../../assets/images/backgrounds/startPage/mobile/itemMobile_1.svg') left bottom no-repeat,
+    url('../../assets/images/backgrounds/startPage/mobile/itemMobile_3.svg') left top no-repeat,
+    url('../../assets/images/backgrounds/startPage/mobile/itemMobile_4.svg') right bottom no-repeat var(--color-tc-violet-l);
+    background-size: calc(var(--qs) * 25) calc(var(--qs) * 87),
+    calc(var(--qs) * 40) calc(var(--qs) * 30),
+    calc(var(--qs) * 10) calc(var(--qs) * 70),
+    calc(var(--qs) * 13) calc(var(--qs) * 70);
+  }
+
+  .quizPage {
+    background: url('../../assets/images/backgrounds/quizPage/mobile/itemMobile_1.svg') left top no-repeat,
+    url('../../assets/images/backgrounds/quizPage/mobile/itemMobile_2.svg') right bottom no-repeat,
+    url('../../assets/images/backgrounds/quizPage/mobile/itemMobile_3.svg') left bottom no-repeat,
+    url('../../assets/images/backgrounds/quizPage/mobile/itemMobile_4.svg') right top no-repeat,
+    url('../../assets/images/backgrounds/quizPage/mobile/itemMobile_5.svg') right bottom no-repeat var(--color-tc-white);
+    background-size: calc(var(--qs) * 27) calc(var(--qs) * 30),
+    calc(var(--qs) * 20) calc(var(--qs) * 20),
+    calc(var(--qs) * 27) calc(var(--qs) * 35),
+    calc(var(--qs) * 26) calc(var(--qs) * 57),
+    calc(var(--qs) * 5) calc(var(--qs) * 146);
+  }
+
+  .resultPage {
+    background: url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_2.svg') right bottom no-repeat,
+    url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_1.svg') right top no-repeat,
+    url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_3.svg') left top no-repeat,
+    url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_4.svg') right top no-repeat,
+    url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_6.svg') right top no-repeat,
+    url('../../assets/images/backgrounds/resultPage/mobile/itemMobile_5.svg') left bottom no-repeat var(--color-tc-violet-l);
+    background-size:calc(var(--qs) * 25) calc(var(--qs) * 20),
+    calc(var(--qs) * 23) calc(var(--qs) * 25),
+    calc(var(--qs) * 20) calc(var(--qs) * 85),
+    calc(var(--qs) * 25) calc(var(--qs) * 190),
+    calc(var(--qs) * 27) calc(var(--qs) * 316),
+    calc(var(--qs) * 34) calc(var(--qs) * 182)
   }
 }

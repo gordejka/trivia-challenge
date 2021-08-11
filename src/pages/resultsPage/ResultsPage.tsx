@@ -1,7 +1,6 @@
 import React, { FC, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import cn from 'classnames';
 import { Question } from '../../interfaces/Question';
 import QuestionResultCard from '../../components/questionResultCard/QuestionResultCard';
 import WrapperType from '../../enums/WrapperType';
@@ -18,6 +17,7 @@ import RatingBar from '../../components/ratingBar/RatingBar';
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper';
 import { RootState } from '../../interfaces/RootState';
 import RestartButton from '../../components/restartButton/RestartButton';
+import classNames from '../../util/classNames';
 
 const ResultsPage: FC = () => {
   const { questions, questionsCount } = useSelector((state: RootState) => state.quiz);
@@ -26,7 +26,7 @@ const ResultsPage: FC = () => {
 
   const answersWrapperClassName = useMemo(() => {
     if (questionsCount > 5) {
-      return cn(classes.questionsListWrapper, classes.activeScroll);
+      return classNames([classes.questionsListWrapper, classes.activeScroll]);
     }
     return classes.questionsListWrapper;
   }, [questionsCount]);
@@ -59,15 +59,15 @@ const ResultsPage: FC = () => {
   }, [dispatch, historyPush]);
 
   return (
-    <PageWrapper wrapperType={WrapperType.DARK}>
+    <PageWrapper wrapperType={WrapperType.RESULT_PAGE}>
       <Container>
-        <ContentWrapper alignItemsCenter>
+        <ContentWrapper>
           <div className={classes.wrapper}>
             <div className={classes.scoreWrapper}>
               <img src={avatar} alt='' />
               <div>
                 <div className={classes.scoreText}>You scored</div>
-                <Score firstValue={correctAnswersCount} secondValue={questionsCount} wrapperType={WrapperType.LIGHT} />
+                <Score firstValue={correctAnswersCount} secondValue={questionsCount} wrapperType={WrapperType.QUIZ_PAGE} />
               </div>
             </div>
             <div className={classes.ratingWrapper}>
