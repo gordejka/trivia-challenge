@@ -8,10 +8,13 @@ interface Props {
 
 const PageWrapper: FC<Props> = ({ wrapperType, children }) => {
   const backgroundType = useMemo(() => {
-    if (wrapperType === WrapperType.DARK) {
-      return classes.dark;
+    if (wrapperType === WrapperType.START_PAGE) {
+      return classes.startPage;
     }
-    return classes.light;
+    if (wrapperType === WrapperType.QUIZ_PAGE) {
+      return classes.quizPage;
+    }
+    return classes.resultPage;
   }, [wrapperType]);
 
   return (

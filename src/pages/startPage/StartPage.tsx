@@ -52,7 +52,7 @@ const StartPage: FC = () => {
   );
 
   return (
-    <PageWrapper wrapperType={WrapperType.DARK}>
+    <PageWrapper wrapperType={WrapperType.START_PAGE}>
       <Container>
         <ContentWrapper>
           <div>
@@ -60,8 +60,6 @@ const StartPage: FC = () => {
             <div className={classes.logoWrapper}>
               <img src={logo} alt='Trivia' className={classes.logo} />
             </div>
-          </div>
-          <div>
             <StartForm
               formData={formData}
               formSubmitHandler={formSubmitHandler}

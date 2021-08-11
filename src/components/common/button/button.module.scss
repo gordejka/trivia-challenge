@@ -6,15 +6,17 @@
   font-weight: 900;
   font-size: var(--qs-5x);
   text-transform: uppercase;
-  background: var(--color-tc-violet);
+  background-color: var(--color-tc-violet-l);
   border: none;
   border-radius: var(--qs-3x);
   padding: var(--qs-7x) 0;
   color: var(--color-tc-white);
   cursor: pointer;
+  box-shadow: 0 var(--qs-2x) 0 var(--color-tc-violet);
+
 
   &.outlined {
-    background: none;
+    background: var(--color-tc-white);
     border: var(--border-size-m) solid;
     color: var(--color-tc-violet-l);
     padding: calc(var(--qs-7x) - var(--border-size-m)) 0;
@@ -24,11 +26,11 @@
     position: relative;
     background: linear-gradient(90deg, var(--color-tc-gradient-start) 0%, var(--color-tc-gradient-finish) 100%);
     box-shadow: 0 var(--qs-2x) 0 var(--color-tc-red-w);
+  }
 
-    &:active {
-      transform: translate(0, var(--qs-2x));
-      box-shadow: none;
-    }
+  &:active {
+    transform: translate(0, var(--qs-2x));
+    box-shadow: none;
   }
 }
 

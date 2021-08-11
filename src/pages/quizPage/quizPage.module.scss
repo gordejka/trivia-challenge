@@ -8,7 +8,7 @@
   }
 
   .categoryWrapper {
-    height: calc(var(--qs) * 56);
+    min-height: calc(var(--qs) * 56);
     align-items: center;
     display: flex;
     margin-bottom: var(--qs-7x);
@@ -33,7 +33,7 @@
   }
 
   .questionWrapper {
-    height: calc(var(--qs) * 46);
+    min-height: calc(var(--qs) * 46);
     align-items: center;
     display: flex;
     margin-bottom: var(--qs-10x);
@@ -79,7 +79,7 @@
   .wrapper {
 
     .categoryWrapper {
-      height: calc(var(--qs) * 30);
+      min-height: calc(var(--qs) * 30);
       margin-bottom: var(--qs-4x);
       align-items: flex-end;
 
@@ -109,7 +109,7 @@
     }
 
     .questionWrapper {
-      height: calc(var(--qs) * 46);
+      min-height: calc(var(--qs) * 46);
       margin-bottom: var(--qs-12x);
 
       > div {
